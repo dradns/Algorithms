@@ -2,6 +2,7 @@ package com.dradns.algo;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.Objects;
 
 public class Main {
     public static void main(String[] args) {
@@ -25,18 +26,30 @@ public class Main {
 //        System.out.println(Integer.toString(c));
 //        System.out.println(Integer.toBinaryString(z));
 
-        LinkedList ls = new LinkedList<Integer>();
-        ArrayList as = new ArrayList<Integer>();
+//        LinkedList ls = new LinkedList<Integer>();
+//        ArrayList as = new ArrayList<Integer>();
         LinkedListL my = new LinkedListL();
-        int c = Integer.parseInt(null);
+        my.addFirst(7);
+        System.out.println(my);
+//        NodeL x = new NodeL();
+//        System.out.println(x.getValue());
 
-        ls.add(10)
-        as.add(10);
-        ls.add("test");
-        as.add("test");
+//        my.addFirst(6);
+//        my.addFirst(5);
 
-        System.out.println(ls);
-        System.out.println(as);
-        System.out.println(c);
+//        int c = Integer.parseInt(null);
+//        NodeL f = new NodeL();
+
+//        ls.add(10);
+//        as.add(10);
+//        ls.add("test");
+//        as.add("test");
+
+//        System.out.println(ls);
+//        System.out.println(as);
+//        System.out.println(Objects.isNull(my));
+//        System.out.println(Objects.isNull(f));
+
+        //System.out.println(f.getValue());
     }
 }

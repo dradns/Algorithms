@@ -1,15 +1,10 @@
 package com.dradns.algo;
 
 public class NodeL {
-    private int value;
+    private Integer value = null;
     private NodeL next;
 
-    public NodeL(){
-        setValue(Integer.parseInt(null));
-        setNextNode(null);
-    }
-
-    public int getValue(){
+    public Integer getValue(){
         return this.value;
     }
 
@@ -18,6 +13,6 @@ public class NodeL {
     }
 
     public void setNextNode(NodeL node){
-        next = node;
+        this.next = node;
     }
 }
