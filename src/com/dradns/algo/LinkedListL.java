@@ -9,6 +9,23 @@ public class LinkedListL {
     public LinkedListL(){
     }
 
+    public void reverse(){
+        last = first;
+
+        NodeL P = first;
+        NodeL C = first.getNext();
+        NodeL N = (first.getNext()).getNext();
+        last.setNextNode(null);
+
+        while (C!= null){
+            N = C.getNext();
+            C.setNextNode(P);
+            P = C;
+            C = N;
+        }
+        first = P;
+    }
+
     public void addFirst(int number){
         if (Objects.isNull(first)){
             first = new NodeL(number);
@@ -119,7 +136,7 @@ public class LinkedListL {
             System.out.println(temp.getValue() + " its TEMP VALUE");
             temp = temp.getNext();
         }
-        System.out.println("\n");
+        System.out.println(" ");
         System.out.println(counter + " its TOTAL COUNTER");
     }
 }
