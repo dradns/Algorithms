@@ -10,8 +10,10 @@ public class LinkedListL {
     }
 
     public void reverse(){
+        if (first == null){
+            return;
+        }
         last = first;
-
         NodeL P = first;
         NodeL C = first.getNext();
         NodeL N = (first.getNext()).getNext();
