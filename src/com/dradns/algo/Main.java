@@ -1,32 +1,41 @@
 package com.dradns.algo;
 
 import java.sql.Array;
-import java.util.ArrayDeque;
-import java.util.Arrays;
+import java.util.*;
 import java.util.Queue;
-import java.util.Stack;
 
 public class Main {
     public static void main(String[] args) {
-        String str1_ok = "хъ{}[]<>";
-        System.out.println("string1");
-        StackL.checkBraces(str1_ok);
-        System.out.println(StackL.checkBraces(str1_ok));
+        Map<Integer, String> oldMap = new HashMap<>();
+//        map.put(1, "Vasya");
+//        map.put(2, "Petya");
+//        map.put(3, "Masha");
+//        System.out.println(map);
+//        System.out.println();
+//        System.out.println(map.get(1));
+//        System.out.println(map);
+//
+//
+//        for (var item : map.keySet()){
+//            System.out.println(map.get(item));
+//        }
+
+//        HashMapL myMap = new HashMapL();
+//        System.out.println(HashMapL.getList(1));
+
+        System.out.println(oldMap.put(-1, "test66") + " its old PUT");
+        System.out.println(oldMap.get(1) + " its old GET");
+        System.out.println(oldMap.remove(1) + " its old REMOVE");
+        System.out.println(oldMap.put(-2, "test66") + " its old PUT");
+        System.out.println(oldMap + " its whole map");
+
+//        System.out.println(myMap.put(1, "test") + "its old");
+
+//        for (int i = - 10; i <20; i++){
+//            System.out.println(i%10);
+//            System.out.println(i + " its I");
+//        }
 
 
-        String str2_ok = "[{45}]";
-        System.out.println("string2");
-        StackL.checkBraces(str2_ok);
-        System.out.println(StackL.checkBraces(str2_ok));
-
-        String str3_neok = "{[]fert";
-        System.out.println("string3");
-        StackL.checkBraces(str3_neok);
-        System.out.println(StackL.checkBraces(str3_neok));
-
-        String str4_neok = "{[]fert";
-        System.out.println("string4");
-        StackL.checkBraces(str4_neok);
-        System.out.println(StackL.checkBraces(str4_neok));
     }
 }

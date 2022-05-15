@@ -2,8 +2,8 @@ package com.dradns.algo;
 
 import java.sql.Array;
 
-public class SuperArray {
-    public SuperArray(){
+public class SuperArrayL {
+    public SuperArrayL(){
     }
 
     public static int[] superInsert(int[] arr, int number){
