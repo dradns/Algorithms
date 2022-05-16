@@ -1,6 +1,7 @@
 package com.dradns.algo;
 
 import java.sql.Array;
+import java.util.Arrays;
 import java.util.LinkedList;
 
 public class HashMapL{
@@ -18,10 +19,16 @@ public class HashMapL{
 //
 //    }
 
-    public static void put(Entry entry){
-        //получить ячейку массива
-        //проверить, что массив существует
-
+    public static void put(Integer key, String value){
+        Entry entry = new Entry(key, value);
+        int arrPlace = getArrPlace(entry.key);
+        System.out.println(arrPlace + " its arrPlace");
+        if (!isListExist(arrPlace)){
+            baseArray[arrPlace] = new LinkedList();
+            baseArray[arrPlace].add(entry);
+        }else {
+            baseArray[arrPlace].add(entry);
+        }
     }
 
     private static Integer getArrPlace(Integer key){
@@ -33,6 +40,8 @@ public class HashMapL{
     }
 
     public static LinkedList getList(int i){
+        System.out.println((Arrays.toString(baseArray[i].toArray())));
+        System.out.println(baseArray[i].size() + " its bucket size");
         return baseArray[i];
     }
 }
@@ -40,9 +49,14 @@ public class HashMapL{
 class Entry {
     public Integer key;
     public String value;
+
+    public Entry(Integer key, String value){
+        this.key = key;
+        this.value = value;
+    }
+
+    @Override
+    public String toString(){
+        return "key = " + this.key + " value = " + this.value;
+    }
 }
-
-
-//DONE - создать массив линкед листов
-//DONE - создать сущность кей-вэлью
-//DONE - создать элементарную хэш-функцию %10
